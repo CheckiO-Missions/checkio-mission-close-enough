@@ -9,7 +9,7 @@ api.add_listener(
     ON_CONNECT,
     CheckiOReferee(
         tests=TESTS,
-        # checker=to_list,
+        checker=to_list,
         function_name={
             "python": "hitting_powers",
             "js": "hittingPowers"
