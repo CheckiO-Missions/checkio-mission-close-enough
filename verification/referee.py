@@ -1,7 +1,7 @@
 from checkio.signals import ON_CONNECT
 from checkio import api
 from checkio.referees.io_template import CheckiOReferee
-# from checkio.referees.checkers import to_list
+from checkio.referees.checkers import to_list
 
 from tests import TESTS
 
