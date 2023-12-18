@@ -1,0 +1,47 @@
+<!-- Describe task in general -->
+
+<p style="text-align: justify;">
+    Außer wenn die Primfaktoren von <code>a, b</code> bereits zusammenarbeiten, diktiert die eiserne Hand von <a target="_blank" href="https://en.wikipedia.org/wiki/Fundamental_theorem_of_arithmetic">Fundamental Theorem of Arithmetic</a>, dass die ganzzahligen Potenzen <code>a**pa</code> und <code>b**pb</code> für zwei beliebige positive ganzzahlige Exponenten <code>pa</code> und <code>pb</code> niemals gleich sein können. Im heiteren Geist von <a target="_blank" href="https://en.wiktionary.org/wiki/close_enough_for_government_work">“close enough for government work”</a> definieren wir jedoch, dass zwei solche Potenzen "treffen", wenn ihre Differenz <code>abs(a**pa-b**pb)</code> multipliziert mit <code>tolerance</code> höchstens gleich der kleineren dieser Potenzen ist. (Diese Definition vermeidet absichtlich die Division, damit sie sowohl schnell als auch genau für beliebig große ganze Zahlen ist.) Zum Beispiel erwartet <code>tolerance=100</code>, dass <code>a**pa</code> und <code>b**pb</code> innerhalb von 1 % liegen. 
+</p>
+
+<p>
+    Für gegebene positive ganze Zahlen gibt <code>a, b</code> die kleinsten positiven ganzzahligen Exponenten zurück <code>{% if is_js %}[pa, pb]{% else %}(pa, pb){% endif %}</code> zurück, die die Anforderung von <code>tolerance</code> erfüllen.
+</p>
+
+<!-- <p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 83px"/>
+</p> -->
+
+<!-- Explain input and output values -->
+<p>
+   <strong>Eingabe:</strong> Drei ganze Zahlen <span>({% if is_js %}number{% else %}int{% endif %})</span>.
+</p>
+
+<p>
+   <strong>Ausgabe:</strong> {% if is_js %}Array{% else %}Tupel{% endif %} <span>({% if is_js %}Array{% else %}Tuple{% endif %})</span> (oder Liste) von zwei ganzen Zahlen <span>({% if is_js %}number{% else %}int{% endif %})</span>. 
+</p>
+
+
+<p>
+    <strong>Beispiele:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
+<p><i>Die Aufgabe wurde von <span>Python CCPS 109</span> übernommen. Sie wird für <span>Ryerson Chang School of Continuing Education</span> von <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
