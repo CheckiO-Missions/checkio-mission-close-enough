@@ -1,0 +1,47 @@
+<!-- Describe task in general -->
+
+<p style="text-align: justify;">
+    Sauf lorsque les facteurs premiers de <code>a, b</code> coopèrent déjà, la main de fer de <a target="_blank" href="https://en.wikipedia.org/wiki/Fundamental_theorem_of_arithmetic">Fundamental Theorem of Arithmetic</a> dicte que les puissances entières <code>a**pa</code> et <code>b**pb</code> ne peuvent jamais être égales pour deux exposants entiers positifs <code>pa</code> et <code>pb</code>. Toutefois, dans l'esprit jovial de <a target="_blank" href="https://en.wiktionary.org/wiki/close_enough_for_government_work">“close enough for government work”</a>, nous définissons deux puissances de ce type comme étant "égales" si leur différence <code>abs(a**pa-b**pb)</code> multipliée par <code>tolerance</code> est au plus égale à la plus petite de ces puissances. (Cette définition évite intentionnellement la division pour rester à la fois rapide et précise pour les entiers arbitrairement grands) Par exemple, <code>tolerance=100</code> s'attend à ce que <code>a**pa</code> et <code>b**pb</code> soient à 1 % près. 
+</p>
+
+<p>
+    Pour des entiers positifs donnés, <code>a, b</code> renvoie les plus petits exposants d'entiers positifs <code>{% if is_js %}[pa, pb]{% else %}(pa, pb){% endif %}</code> qui satisfont à l'exigence de <code>tolerance</code>.
+</p>
+
+<!-- <p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 83px"/>
+</p> -->
+
+<!-- Explain input and output values -->
+<p>
+   <strong>Entrée:</strong> Trois entiers <span>({% if is_js %}number{% else %}int{% endif %})</span>.
+</p>
+
+<p>
+   <strong>Sortie:</strong> {% if is_js %}Tableau{% else %}Tuple{% endif %} <span>({% if is_js %}Array{% else %}Tuple{% endif %})</span> (ou liste) de deux entiers <span>({% if is_js %}number{% else %}int{% endif %})</span>. 
+</p>
+
+
+<p>
+    <strong>Exemples:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
+<p><i>La mission est extraite de <span>Python CCPS 109</span>. Elle est enseignée à <span>Ryerson Chang School of Continuing Education</span> par <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
